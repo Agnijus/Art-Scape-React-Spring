@@ -1,6 +1,7 @@
 .services-container {
   background-color: var(--grey-light);
   width: 100vw;
+  padding-bottom: 3rem;
 }
 .services-container-center {
   padding-top: 50px;

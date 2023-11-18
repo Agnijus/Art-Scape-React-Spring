@@ -24,9 +24,15 @@ const HomePage = () => {
     gallery: galleryRef,
   };
 
-  const onScroll = (ref) => {
+  const onScroll = (ref, offset = -70) => {
     if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      const currentPosition = ref.current.getBoundingClientRect().top;
+      const offsetPosition = currentPosition + window.scrollY + offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 

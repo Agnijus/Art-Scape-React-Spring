@@ -1,23 +1,58 @@
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ refs, onScroll }) => {
   return (
     <footer className="footer-container">
       <div className="footer-container-center">
         <div className="footer-internal-links">
-          <a href="#home" className="scroll-link footer-link-home">
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              onScroll(refs.home);
+            }}
+            href="#home"
+            className="scroll-link footer-link-home"
+          >
             Home
           </a>
-          <a href="#about" className="scroll-link footer-link-about">
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              onScroll(refs.about);
+            }}
+            href="#about"
+            className="scroll-link footer-link-about"
+          >
             About
           </a>
-          <a href="#services" className="scroll-link footer-link-services">
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              onScroll(refs.services);
+            }}
+            href="#services"
+            className="scroll-link footer-link-services"
+          >
             Services
           </a>
-          <a href="#featured" className="scroll-link footer-link-featured">
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              onScroll(refs.featured);
+            }}
+            href="#featured"
+            className="scroll-link footer-link-featured"
+          >
             Featured
           </a>
-          <a href="#gallery" className="scroll-link footer-link-gallery">
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              onScroll(refs.gallery);
+            }}
+            href="#gallery"
+            className="scroll-link footer-link-gallery"
+          >
             Gallery
           </a>
         </div>
