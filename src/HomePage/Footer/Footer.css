@@ -1,0 +1,33 @@
+.footer-container {
+  color: var(--white);
+  letter-spacing: 3px;
+  font-size: 1rem;
+  background-color: #021d49de;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+}
+.footer-container-center {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.footer-internal-links {
+  margin-bottom: 2rem;
+}
+.footer-internal-links a {
+  margin: 0 0.5rem;
+}
+.footer-external-links {
+  margin-bottom: 2rem;
+}
+.footer-external-links i {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+.footer-container a {
+  color: white;
+}

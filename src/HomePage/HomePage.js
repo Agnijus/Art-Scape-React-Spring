@@ -5,6 +5,7 @@ import Services from "./Services/Services";
 import FeaturedCreations from "./FeaturedCreations/FeaturedCreations";
 import NewsLetter from "./NewsLetter/NewsLetter";
 import Gallery from "./Gallery/Gallery";
+import Footer from "./Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <FeaturedCreations />
       <NewsLetter />
       <Gallery />
+      <Footer />
     </div>
   );
 };
