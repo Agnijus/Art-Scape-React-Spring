@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./navigation.css";
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
     <nav className="nav-container">
-      <div class="nav-container-center">
+      <div className="nav-container-center">
         <Title />
         <InternalLinks />
         <ExternalLinks />
@@ -23,17 +23,17 @@ export default Navigation;
 
 const Title = () => {
   return (
-    <div class="nav-title">
-      <span class="nav-title-one">Art</span>
-      <span class="nav-title-two">Scape</span>
+    <div className="nav-title">
+      <span className="nav-title-one">Art</span>
+      <span className="nav-title-two">Scape</span>
     </div>
   );
 };
 
 const MenuButton = ({ toggleMenu }) => {
   return (
-    <button onClick={toggleMenu} class="nav-drop-down-menu-btn">
-      <i class="fa-solid fa-bars"></i>
+    <button onClick={toggleMenu} className="nav-drop-down-menu-btn">
+      <i className="fa-solid fa-bars"></i>
     </button>
   );
 };
@@ -41,19 +41,19 @@ const MenuButton = ({ toggleMenu }) => {
 const InternalLinks = () => {
   return (
     <>
-      <a href="#home" class="nav-internal-home scroll-link">
+      <a href="#home" className="nav-internal-home scroll-link">
         home
       </a>
-      <a href="#about" class="scroll-link nav-internal-about">
+      <a href="#about" className="scroll-link nav-internal-about">
         about
       </a>
-      <a href="#services" class="nav-internal-services scroll-link">
+      <a href="#services" className="nav-internal-services scroll-link">
         services
       </a>
-      <a href="#featured" class="nav-internal-featured scroll-link">
+      <a href="#featured" className="nav-internal-featured scroll-link">
         featured
       </a>
-      <a href="#gallery" class="nav-internal-gallery scroll-link">
+      <a href="#gallery" className="nav-internal-gallery scroll-link">
         gallery
       </a>
     </>
@@ -66,19 +66,19 @@ const ExternalLinks = () => {
       <a
         href="https://www.facebook.com"
         target="_blank"
-        class="nav-external-facebook"
+        className="nav-external-facebook"
       >
-        <i class="fa-brands fa-facebook"></i>
+        <i className="fa-brands fa-facebook"></i>
       </a>
-      <a href="https://www.twitter.com" target="_blank" class="external-x">
-        <i class="fa-brands fa-x-twitter"></i>
+      <a href="https://www.twitter.com" target="_blank" className="external-x">
+        <i className="fa-brands fa-x-twitter"></i>
       </a>
       <a
         href="https://www.instagram.com"
         target="_blank"
-        class="external-instagram"
+        className="external-instagram"
       >
-        <i class="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-instagram"></i>
       </a>
     </>
   );
@@ -86,14 +86,14 @@ const ExternalLinks = () => {
 
 const DropDownMenu = ({ toggleMenu }) => {
   return (
-    <div id="drop-down-menu" class="nav-drop-down-menu-container">
+    <div id="drop-down-menu" className="nav-drop-down-menu-container">
       <ul>
         <li>
           <a
             on
             onClick={toggleMenu}
             href="#home"
-            class="nav-internal-home scroll-link"
+            className="nav-internal-home scroll-link"
           >
             home
           </a>
@@ -102,7 +102,7 @@ const DropDownMenu = ({ toggleMenu }) => {
           <a
             onClick={toggleMenu}
             href="#about"
-            class="nav-internal-about scroll-link"
+            className="nav-internal-about scroll-link"
           >
             about
           </a>
@@ -111,7 +111,7 @@ const DropDownMenu = ({ toggleMenu }) => {
           <a
             onClick={toggleMenu}
             href="#services"
-            class="nav-internal-services scroll-link"
+            className="nav-internal-services scroll-link"
           >
             services
           </a>
@@ -120,7 +120,7 @@ const DropDownMenu = ({ toggleMenu }) => {
           <a
             onClick={toggleMenu}
             href="#featured"
-            class="nav-internal-featured scroll-link"
+            className="nav-internal-featured scroll-link"
           >
             featured
           </a>
@@ -129,7 +129,7 @@ const DropDownMenu = ({ toggleMenu }) => {
           <a
             onClick={toggleMenu}
             href="#gallery"
-            class="nav-internal-gallery scroll-link"
+            className="nav-internal-gallery scroll-link"
           >
             gallery
           </a>

@@ -2,14 +2,14 @@ import "./hero.css";
 
 const Hero = () => {
   return (
-    <section class="hero-container">
-      <div class="hero-container-center">
-        <h1 class="hero-title">dive into artistry</h1>
-        <p class="hero-p">
+    <section className="hero-container">
+      <div className="hero-container-center">
+        <h1 className="hero-title">dive into artistry</h1>
+        <p className="hero-p">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
           quia qui expedita tempora odio perspiciatis.
         </p>
-        <button class="hero-btn">explore arts</button>
+        <button className="hero-btn">explore arts</button>
       </div>
     </section>
   );

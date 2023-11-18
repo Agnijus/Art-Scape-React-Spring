@@ -2,20 +2,20 @@ import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
-    <section id="about" class="about-us-container">
-      <div class="about-us-container-center">
-        <h2 class="about-us-title">
+    <section id="about" className="about-us-container">
+      <div className="about-us-container-center">
+        <h2 className="about-us-title">
           <span>about</span>
-          <span class="about-us-title-two">us</span>
+          <span className="about-us-title-two">us</span>
         </h2>
-        <div class="about-us-image"></div>
-        <div class="about-us-text">
-          <h3 class="about-us-text-title">explore the difference</h3>
-          <p class="about-us-text-p">
+        <div className="about-us-image"></div>
+        <div className="about-us-text">
+          <h3 className="about-us-text-title">explore the difference</h3>
+          <p className="about-us-text-p">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Perferendis vitae, nisi ipsum quod quae quidem
           </p>
-          <button class="about-us-text-btn">read more</button>
+          <button className="about-us-text-btn">read more</button>
         </div>
       </div>
     </section>
