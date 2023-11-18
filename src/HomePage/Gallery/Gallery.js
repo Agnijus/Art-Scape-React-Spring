@@ -1,3 +1,5 @@
+import React, { forwardRef } from "react";
+
 import "./Gallery.css";
 import img1 from "../Images/gallery-one.jpg";
 import img2 from "../Images/gallery-two.jpg";
@@ -19,15 +21,15 @@ const data = [
   { img: img8 },
 ];
 
-const Gallery = () => {
+const Gallery = forwardRef((props, ref) => {
   return (
-    <section className="gallery-container">
+    <section ref={ref} id="gallery" className="gallery-container">
       {data.map((image) => {
         return <Image {...image} />;
       })}
     </section>
   );
-};
+});
 export default Gallery;
 
 const Image = ({ img }) => {

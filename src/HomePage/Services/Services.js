@@ -1,3 +1,5 @@
+import React, { forwardRef } from "react";
+
 import "./Services.css";
 
 const data = [
@@ -24,9 +26,9 @@ const data = [
   },
 ];
 
-const Services = () => {
+const Services = forwardRef((props, ref) => {
   return (
-    <section id="services" className="services-container">
+    <section ref={ref} id="services" className="services-container">
       <div className="services-container-center">
         <h2 className="services-title">
           <span>our</span>{" "}
@@ -39,7 +41,7 @@ const Services = () => {
       </div>
     </section>
   );
-};
+});
 export default Services;
 
 const Service = (props) => {

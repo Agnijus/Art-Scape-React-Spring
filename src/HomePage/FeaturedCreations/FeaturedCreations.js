@@ -1,3 +1,5 @@
+import React, { forwardRef } from "react";
+
 import "./FeaturedCreations.css";
 
 import img1 from "../Images/stone.jpg";
@@ -44,9 +46,9 @@ const data = [
   },
 ];
 
-const FeaturedCreations = () => {
+const FeaturedCreations = forwardRef((props, ref) => {
   return (
-    <section id="featured" className="creations-container">
+    <section ref={ref} id="featured" className="creations-container">
       <h2 className="creations-title">
         <span>featured</span>
         <span className="creations-title-two">arts</span>
@@ -61,7 +63,7 @@ const FeaturedCreations = () => {
       </div>
     </section>
   );
-};
+});
 export default FeaturedCreations;
 
 const Creation = ({ img, title, text, type, price }) => {

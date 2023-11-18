@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./navigation.css";
 
-const Navigation = () => {
+const Navigation = ({ onScroll, refs }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,11 +11,13 @@ const Navigation = () => {
     <nav className="nav-container">
       <div className="nav-container-center">
         <Title />
-        <InternalLinks />
+        <InternalLinks onScroll={onScroll} refs={refs} />
         <ExternalLinks />
         <MenuButton toggleMenu={toggleMenu} />
       </div>
-      {isMenuOpen && <DropDownMenu toggleMenu={toggleMenu} />}
+      {isMenuOpen && (
+        <DropDownMenu onScroll={onScroll} refs={refs} toggleMenu={toggleMenu} />
+      )}
     </nav>
   );
 };
@@ -38,22 +40,57 @@ const MenuButton = ({ toggleMenu }) => {
   );
 };
 
-const InternalLinks = () => {
+const InternalLinks = ({ onScroll, refs }) => {
   return (
     <>
-      <a href="#home" className="nav-internal-home scroll-link">
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          onScroll(refs.home);
+        }}
+        href="#home"
+        className="nav-internal-home scroll-link"
+      >
         home
       </a>
-      <a href="#about" className="scroll-link nav-internal-about">
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          onScroll(refs.about);
+        }}
+        href="#about"
+        className="scroll-link nav-internal-about"
+      >
         about
       </a>
-      <a href="#services" className="nav-internal-services scroll-link">
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          onScroll(refs.services);
+        }}
+        href="#services"
+        className="nav-internal-services scroll-link"
+      >
         services
       </a>
-      <a href="#featured" className="nav-internal-featured scroll-link">
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          onScroll(refs.featured);
+        }}
+        href="#featured"
+        className="nav-internal-featured scroll-link"
+      >
         featured
       </a>
-      <a href="#gallery" className="nav-internal-gallery scroll-link">
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          onScroll(refs.gallery);
+        }}
+        href="#gallery"
+        className="nav-internal-gallery scroll-link"
+      >
         gallery
       </a>
     </>
@@ -84,14 +121,18 @@ const ExternalLinks = () => {
   );
 };
 
-const DropDownMenu = ({ toggleMenu }) => {
+const DropDownMenu = ({ onScroll, refs, toggleMenu }) => {
   return (
     <div id="drop-down-menu" className="nav-drop-down-menu-container">
       <ul>
         <li>
           <a
             on
-            onClick={toggleMenu}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleMenu();
+              onScroll(refs.home);
+            }}
             href="#home"
             className="nav-internal-home scroll-link"
           >
@@ -100,7 +141,11 @@ const DropDownMenu = ({ toggleMenu }) => {
         </li>
         <li>
           <a
-            onClick={toggleMenu}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleMenu();
+              onScroll(refs.about);
+            }}
             href="#about"
             className="nav-internal-about scroll-link"
           >
@@ -109,7 +154,11 @@ const DropDownMenu = ({ toggleMenu }) => {
         </li>
         <li>
           <a
-            onClick={toggleMenu}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleMenu();
+              onScroll(refs.services);
+            }}
             href="#services"
             className="nav-internal-services scroll-link"
           >
@@ -118,7 +167,11 @@ const DropDownMenu = ({ toggleMenu }) => {
         </li>
         <li>
           <a
-            onClick={toggleMenu}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleMenu();
+              onScroll(refs.featured);
+            }}
             href="#featured"
             className="nav-internal-featured scroll-link"
           >
@@ -127,7 +180,11 @@ const DropDownMenu = ({ toggleMenu }) => {
         </li>
         <li>
           <a
-            onClick={toggleMenu}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleMenu();
+              onScroll(refs.gallery);
+            }}
             href="#gallery"
             className="nav-internal-gallery scroll-link"
           >

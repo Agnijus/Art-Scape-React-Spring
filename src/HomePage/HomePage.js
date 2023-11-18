@@ -1,3 +1,5 @@
+import React, { useRef } from "react";
+
 import Navigation from "./Navigation/Navigation";
 import Hero from "./Hero/Hero";
 import AboutUs from "./AboutUs/AboutUs";
@@ -8,16 +10,36 @@ import Gallery from "./Gallery/Gallery";
 import Footer from "./Footer/Footer";
 
 const HomePage = () => {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
+  const featuredRef = useRef(null);
+  const galleryRef = useRef(null);
+
+  const refs = {
+    home: homeRef,
+    about: aboutRef,
+    services: servicesRef,
+    featured: featuredRef,
+    gallery: galleryRef,
+  };
+
+  const onScroll = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div id="home">
-      <Navigation />
+    <div ref={homeRef} id="home">
+      <Navigation onScroll={onScroll} refs={refs} />
       <Hero />
-      <AboutUs />
-      <Services />
-      <FeaturedCreations />
+      <AboutUs ref={aboutRef} />
+      <Services ref={servicesRef} />
+      <FeaturedCreations ref={featuredRef} />
       <NewsLetter />
-      <Gallery />
-      <Footer />
+      <Gallery ref={galleryRef} />
+      <Footer onScroll={onScroll} refs={refs} />
     </div>
   );
 };
