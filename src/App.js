@@ -4,6 +4,7 @@ import Hero from "./Hero/Hero";
 import AboutUs from "./AboutUs/AboutUs";
 import Services from "./Services/Services";
 import FeaturedCreations from "./FeaturedCreations/FeaturedCreations";
+import NewsLetter from "./NewsLetter/NewsLetter";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <AboutUs />
       <Services />
       <FeaturedCreations />
+      <NewsLetter />
     </div>
   );
 }

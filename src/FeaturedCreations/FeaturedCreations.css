@@ -1,7 +1,7 @@
 .creations-container {
   max-width: 1400px;
   width: 90vw;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 .creation-grid-container {
   display: grid;
@@ -10,7 +10,6 @@
   margin: 3rem 0;
 }
 .creations-title {
-  margin-top: 3rem;
   text-align: center;
 }
 .creations-title-two {
