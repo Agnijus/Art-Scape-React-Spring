@@ -1,0 +1,90 @@
+.creations-container {
+  max-width: 1400px;
+  width: 90vw;
+  margin: 0 auto;
+}
+.creation-grid-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+  margin: 3rem 0;
+}
+.creations-title {
+  margin-top: 3rem;
+  text-align: center;
+}
+.creations-title-two {
+  margin-left: 10px;
+  color: var(--primary);
+}
+.creation-card {
+  width: 100%;
+  height: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.creation-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(102%);
+  transition: var(--transition);
+}
+.creation-card-image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.creation-card-text {
+  flex-direction: column;
+  height: 50%;
+  padding: 1.5rem;
+  letter-spacing: 1px;
+  background-color: var(--grey-light);
+}
+.creation-card-title {
+  margin-bottom: 1rem;
+}
+.creation-card-p {
+  font-size: 0.9rem;
+  color: var(--grey);
+  margin-bottom: 3rem;
+}
+.creation-info {
+  height: 20%;
+  display: flex;
+  font-weight: 400;
+  color: var(--primary-dark);
+}
+.creation-type {
+  width: 50%;
+  align-self: flex-end;
+}
+.creation-price {
+  align-self: flex-end;
+  width: 50%;
+  text-align: end;
+}
+.creations-btn-container {
+  flex: 0 0 100%;
+  display: flex;
+}
+.creations-btn {
+  margin: 0 auto;
+  color: var(--grey-light);
+  background-color: var(--primary);
+  padding: 0.75rem 1rem;
+  border: none;
+}
+.creations-btn:hover {
+  background-color: var(--primary-light);
+  transition: var(--transition);
+}
+@media screen and (min-width: 770px) {
+  .creation-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .creation-grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
