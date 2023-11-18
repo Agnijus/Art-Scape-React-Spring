@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./navigation.css";
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <nav>
+    <nav className="nav-container">
       <div class="nav-container-center">
         <Title />
         <InternalLinks />
