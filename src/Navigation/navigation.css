@@ -1,0 +1,131 @@
+/*
+=============== 
+Nav
+===============
+*/
+.nav-container {
+  background-color: var(--white);
+  display: flex;
+  position: sticky;
+  height: 7vh;
+  top: 0;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-light);
+}
+.nav-container-center {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.nav-title {
+  font-weight: 600;
+  font-size: 1.75rem;
+  letter-spacing: 4px;
+  flex-shrink: 0;
+  margin-right: auto;
+  margin-left: 2rem;
+}
+.nav-title-two {
+  color: var(--primary);
+}
+.nav-container i {
+  color: var(--primary);
+  align-items: center;
+}
+.nav-container a {
+  flex-shrink: 0;
+  align-items: center;
+}
+a[class*="internal"] {
+  margin: 0 0.5rem 0 0.5rem;
+}
+a[class*="internal"]:hover {
+  color: var(--primary);
+}
+.fa-brands {
+  font-size: 1.2rem;
+}
+.fa-brands:hover {
+  color: var(--primary-light);
+  transition: var(--transition);
+}
+
+a[class*="external"] {
+  margin-right: 0.5rem;
+}
+a[class*="external"]:hover {
+  color: var(--primary-light);
+}
+.nav-drop-down-menu-btn {
+  background-color: var(--white);
+  font-size: 1.75rem;
+  margin-right: 2rem;
+  border: none;
+  display: none;
+}
+.nav-drop-down-menu-btn:hover {
+  transform: scale(1.2);
+  transition: var(--transition);
+}
+.nav-external-facebook {
+  margin-left: auto;
+}
+a[class*="instagram"] {
+  margin-right: 2rem;
+}
+.nav-drop-down-menu-container {
+  letter-spacing: 4px;
+  display: flex;
+  height: 30vh;
+  position: fixed;
+  width: 100vw;
+  top: 7vh;
+  left: 0;
+  z-index: 1;
+  background-color: var(--white);
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+}
+
+.nav-drop-down-menu-container a {
+  display: flex;
+  padding-left: 1.25rem;
+  width: 100%;
+}
+.nav-drop-down-menu-container a:hover {
+  color: var(--grey);
+}
+li {
+  display: flex;
+  height: 6vh;
+}
+li:hover {
+  background-color: var(--primary-light-transition);
+}
+button {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+@media screen and (max-width: 900px) {
+  .nav-container
+    a:not(.nav-drop-down-menu-btn, .nav-drop-down-menu-container a) {
+    display: none;
+  }
+  .nav-drop-down-menu-btn {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .nav-drop-down-menu-container {
+    visibility: hidden;
+    display: none;
+  }
+}

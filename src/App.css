@@ -1,0 +1,60 @@
+/*
+=============== 
+Global
+===============
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: var(--letter-spacing);
+}
+
+:root {
+  --primary: #0050d2;
+  --primary-dark: #0050d2;
+  --primary-light: #007bff;
+  --primary-light-transition: rgba(108, 166, 255, 0.6);
+  --grey-light: #f1f5f9;
+  --grey: #566274;
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+  --fluid-width: 90vw;
+  --max-width: 1170px;
+  --black: #222;
+  --white: #fff;
+  --letter-spacing: 2px;
+  --border-radius: 0.15rem;
+  --shadow-light: 0 5px 4px -4px rgba(0, 0, 0, 0.5);
+  --shadow-dark: 05px 15px rgba(0, 0, 0, 0.2);
+  --transition: 0.3s ease-in-out all;
+  --transition-about-us: 1s all;
+  --border-radius: 10px;
+}
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 2.75rem;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.75rem;
+  text-transform: capitalize;
+}
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--grey);
+}
+ul {
+  list-style-type: none;
+}
