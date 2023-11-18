@@ -4,6 +4,7 @@ import AboutUs from "./AboutUs/AboutUs";
 import Services from "./Services/Services";
 import FeaturedCreations from "./FeaturedCreations/FeaturedCreations";
 import NewsLetter from "./NewsLetter/NewsLetter";
+import Gallery from "./Gallery/Gallery";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Services />
       <FeaturedCreations />
       <NewsLetter />
+      <Gallery />
     </div>
   );
 };
